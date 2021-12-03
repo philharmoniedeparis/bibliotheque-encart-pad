@@ -1,0 +1,51 @@
+<div id="draggable-chat" class="draggable-chat-fixed">
+    <div id="resizable-chat">
+        <nav class="chat-navbar">
+            <div>
+                <button id="chat-logout-btn">
+                    <img
+                        src="/ui/skins/MEDIA/images/colloques/chat-pictos/logout.svg"
+                        alt="pictogramme se déconnecter de la salle de discussion"/>
+                </button>
+                <div class="tooltip-chat tooltip-logout">Se déconnecter de cette salle de discussion</div>
+            </div>
+            <div class="nav-btn-ctn-right">
+                <button id="chat-dragg-btn">
+                    <img
+                        src="/ui/skins/MEDIA/images/colloques/chat-pictos/move.svg"
+                        alt="pictogramme déplacer"/>
+                </button>
+                <div class="tooltip-chat tooltip-drag">Déplacer</div>
+                <button id="chat-resize-btn">
+                    <img
+                        src="/ui/skins/MEDIA/images/colloques/chat-pictos/resize_screen.svg"
+                        alt="pictogramme resize"/>
+                </button>
+                <div class="tooltip-chat tooltip-resize">Redimensionner</div>
+                <button id="chat-reduce-btn">
+                    <img
+                        src="/ui/skins/MEDIA/images/colloques/chat-pictos/reduce.svg"
+                        alt="pictogramme réduire"/>
+                </button>
+                <div class="tooltip-chat tooltip-reduce">Réduire</div>
+            </div>
+        </nav>
+        <div id="live-chat"></div>
+        <script
+            src="https://livechat.philharmoniedeparis.fr/app/PPLiveChat.umd.min.js"
+            type="text/javascript"></script>
+        <link
+            rel="stylesheet"
+            href="https://livechat.philharmoniedeparis.fr/app/PPLiveChat.css"/>
+        <link
+            rel="stylesheet"
+            href="https://livechat.philharmoniedeparis.fr/pad.philharmoniedeparis.fr.css"/>
+        <form style="display: none;">
+            <input type="hidden" id="clRoom" value="13"/> <!-- value = id de la room -->
+            <input type="hidden" id="clLocale" value="fr"/> <!-- value = langue -->
+        </form>
+        <script
+            src="/ui/plug-in/integration/pp-live-chat/clTestFunctionChat.js"
+            type="text/javascript"></script>
+    </div>
+</div>
