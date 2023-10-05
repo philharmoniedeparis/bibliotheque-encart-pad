@@ -1,0 +1,23 @@
+<script src="https://d3js.org/d3.v7.min.js" type="text/javascript"></script>
+<script src="/ui/skins/MEDIA/refonte-pad/js/custom-select.js" type="text/javascript"></script>
+<script src="/ui/skins/MEDIA/refonte-pad/js/lettre-info.js" type="text/javascript"></script>
+<nav class="filter x-col">
+    <p>Filtrer par années</p>
+    <div class="custom-select"><select name="filterYear" id="filterYear" placeholder="Tout voir"></select></div>
+</nav>
+
+
+<section id="lettre-info-container" class="x-col _3-col thumb-container"></section>
+<template id="lettre-info-template">
+    <article class="round-item lettre-info" id="li-container">
+            <div class="crop-image">
+                <img id="li-img" src="/ui/skins/MEDIA/refonte-pad/img/placeholder-concert.jpg" alt=""/>
+            </div>
+            <section class="text-content">
+                <h2 id="li-title"></h2>
+                <p id="li-date" class="date"></p>
+                <a id="li-link" href="" title="" target="_blanck" class="btn btn-default"></a>
+            </section>
+            <input id="metaData" name="metaData" type="hidden"/>
+    </article>
+</template>

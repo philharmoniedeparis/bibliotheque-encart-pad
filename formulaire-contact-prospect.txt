@@ -1,0 +1,50 @@
+Procédure pour formater les formulaires :
+
+1    Enlever tous les styles (sauf display:none)
+2    Ajouter les classes "btn btn-default left" aux boutons soumettre et reset
+2.1  Ajouter les classes "pro" aux bouton soumettre
+2.2  Ajouter la classe "btn-list" à la balise englobant les boutons soumettre et reset
+3    Ajouter la classe form-require à <span>*</span>
+4    Ajouter la classe infoBox au bouton "?" 
+5    Ajouter la classe infoPosition à la div englobant le bloc "?" et sa réponse
+6    Placer infoPosition à la suite du span.form-require * correspondant
+7    Remplacer le contenu de la fonction tooltipshow: 
+
+          function tooltipShow2250973000000116094(el) {
+               var tooltip = el.nextElementSibling;
+               
+               var tooltipDisplay = tooltip.style.display;
+               if (tooltipDisplay == 'none') {
+               var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+               for (i = 0; i < allTooltip.length; i++) {
+                    allTooltip[i].style.display = 'none';
+               }
+
+
+               /*********** A Ajouter ***********/
+
+               var question = $('.zcwf_col_help > span')
+               for (i = 0; i < question.length; i++) {
+                    question[i].style.display = 'block';
+                    question[i].parentNode.style.position = "absolute";
+               }
+               tooltip.style.display = 'block'; 
+               el.parentNode.style.position = 'static'; 
+
+               /*********** End ajout ***********/
+
+
+               el.style.display = "none";
+               } else {
+               tooltip.style.display = 'none';
+               }
+          }
+          
+8    Diviser au besoin avec le système de colonnage
+
+Accessibilité des formulaires :
+
+1    Ajouter les aria-required="true"  aria-invalid="false" sur les champs obligatoires
+2    Ajouter l'attribut title="champ invalide" dans les label obligatoires
+3    Ajouter l'attribut autocomplete="{param}" en fonction du champ 
+     Liste des attributs : https://developer.mozilla.org/fr/docs/Web/HTML/Attributes/autocomplete

@@ -1,0 +1,15 @@
+Intégration de l'encart sommaire Ermes:
+
+- Mise en forme de la page : 3 Colonnes
+- Positionnement du menu : Colonne de droite
+- Classe css de l'encart : sidebar-sommaire
+
+Peuplement du menu :
+Le menu se peuple automatiquement avec les noms et niveaux de titre des encarts.
+Pour cacher un nom de menu : Ne pas mettre de titre à l'encart (" ") 
+
+Comportement du menu éditable dans le fichier FloatMenuFrame.js l. 1885
+Css pour pad in refonte.css
+
+Evolution possible : 
+Si nécessité d'ajout d'option de placement du menu à gauche ou droite, créer classes de propriétés de pages menu-left & menu-right

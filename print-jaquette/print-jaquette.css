@@ -1,0 +1,240 @@
+
+@media print{
+/* IMPRESSIONS DES JAQUETTES SUR LES PAGES DE NOTICES LONGUES*/
+.cl-print{
+    display: none !important;
+}
+.cl-print div#notice_longue_description>.body-jaquette{
+    flex: unset;
+}
+body.refonte2021.connecte.pad,
+body{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: #fff !important;
+}
+.body-jaquette{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    width: 246mm;
+    height: 121mm;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    border: 0.25pt solid #bfbfbf;
+    background-color: #fff !important;
+    z-index: 0;
+    margin: auto;
+}
+.body-jaquette .verso,
+.body-jaquette .recto{
+    width: 123mm;
+}
+.body-jaquette .recto .infos{
+    position: relative;
+}
+.body-jaquette .recto .logo,
+.body-jaquette .recto .overlay-logo,
+.body-jaquette .recto .cartouche,
+.body-jaquette .recto .imageConcert{
+    position: absolute;
+}
+.body-jaquette .recto .crop-image{
+    width: 113mm !important;
+    height: 91mm !important;
+    margin: 5mm 5mm 0 5mm;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.body-jaquette .recto .imageConcert{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    max-width: unset !important;
+    z-index: 1;
+
+}
+.body-jaquette .recto .logo{
+    width: 32mm;
+    z-index: 3;
+    top: 5mm;
+    left: 10mm;
+}
+.body-jaquette .recto .overlay-logo{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 5mm;
+    background: linear-gradient(130deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 50%) !important;
+}
+.body-jaquette .recto .cartouche{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: rgb(252,206,125) !important;
+    z-index: 2;
+}
+.body-jaquette .recto .cartouche.left{
+    border-radius: 0 6mm 6mm 0;
+    padding: 2mm 2mm 2mm 5mm;
+    width: 70mm;
+    bottom: 10mm;
+    height: fit-content;
+}
+.body-jaquette .recto .cartouche.left h2{
+    font-size: 12pt;
+    margin: 0;
+}
+.body-jaquette .recto .cartouche.left .type{
+    font-size: 11pt;
+    font-weight: bold;
+    color: #000;
+}
+.body-jaquette .recto .cartouche.left *{
+    text-align: left;
+}
+.body-jaquette .recto .cartouche.right{
+    border-radius: 6mm 0 0 6mm;
+    width: 55mm;
+    padding: 2mm 5mm 2mm 2mm;
+    top: 5mm;
+    right: 0;
+}
+.body-jaquette .recto .cartouche.right *{
+    text-align: right !important;
+    margin: 0;
+}
+.body-jaquette .recto .cartouche.right .numeroConcert{
+    font-size: 8pt;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.body-jaquette .recto .cartouche.right .docNum{
+    font-size: 11pt;
+}
+.body-jaquette .recto .tuto{
+    position: relative;
+    height: 25mm;
+    padding-top: 2mm;
+} 
+.body-jaquette .recto .tuto ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 5mm;
+}
+.body-jaquette .recto .tuto ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.body-jaquette .recto .tuto ul li img{
+    margin-bottom: 1mm;
+}
+/* .body-jaquette .recto .tuto ul li:after{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    content: url(https://pad.philharmoniedeparis.fr/ui/skins/MEDIA/jaquettes/chevron-jaquette.svg);
+    display: block;
+    width: 2mm;
+    height: 100%;
+    bottom: 14mm;
+    right: 3mm;
+    position: relative
+}  */
+.body-jaquette .recto .tuto ul li:first-child::after{
+    content: '';
+}   
+.body-jaquette .recto .tuto ul li p{
+    font-size: 7pt;
+    text-align: center !important;
+}
+.body-jaquette .recto .tuto ul li strong{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.body-jaquette .recto .tuto .legende{
+    font-size: 8pt;
+    position: absolute;
+    bottom: 2mm;
+    left: 5mm;
+}
+/* .body-jaquette .recto .tuto .connect::before{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    content: url(https://pad.philharmoniedeparis.fr/ui/skins/MEDIA/jaquettes/user.svg);
+    display: block;
+}
+.body-jaquette .recto .tuto .search::before{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    content: url(https://pad.philharmoniedeparis.fr/ui/skins/MEDIA/jaquettes/search.svg);
+    display: block;
+}
+.body-jaquette .recto .tuto .run::before{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    content: url(https://pad.philharmoniedeparis.fr/ui/skins/MEDIA/jaquettes/run.svg);
+    display: block;
+} */
+.body-jaquette .recto .tuto .search{
+    width: 41mm;
+}
+.body-jaquette .verso .encart{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    width: 113mm;
+    height: 91mm;
+    padding: 5mm;
+    margin: 5mm auto 0;
+    display: block;
+    background-color: rgb(237,237,237) !important;
+    border-radius: 6mm;
+}
+.body-jaquette .verso ol{
+    padding-left: 3.5mm;
+}
+
+.body-jaquette .verso li,
+.body-jaquette .verso p{
+    font-size: 10pt;
+}
+.body-jaquette .verso p{
+    margin: 0;
+}
+.body-jaquette .verso .participants{
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 3mm !important;
+}
+.body-jaquette .verso .programme{
+    font-size: 12pt;
+}
+.body-jaquette .verso h3{
+    font-size: 12pt;
+    margin: 3mm 0;
+}
+.body-jaquette .verso h3{
+    font-size: 12pt;
+    margin: 3mm 0 1mm;
+}
+.body-jaquette .verso .logo{
+    width: 30mm;
+    margin: 4mm auto 1mm;
+    display: block;
+}
+.body-jaquette .verso .link{
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center !important;
+    display: block;
+    margin: auto;
+}
+
+}

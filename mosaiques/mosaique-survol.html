@@ -1,0 +1,26 @@
+<script src="https://d3js.org/d3.v7.min.js" type="text/javascript"></script>
+<script src="/ui/skins/MEDIA/refonte-pad/js/mozaicFilter/constructMozaic.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/ui/skins/MEDIA/refonte-pad/js/mozaicFilter/mosaique.css" />
+<div class="mozaik-wrap mozaik-infoSurvol container" id="idMozaic"></div>
+<template id="mozaik-infoSurvol-template">
+<li class="mozaik-item">
+    <a title="#" id="mosSurvol-link" href="#">
+        <div class="texte">
+            <h3 class="titre" data-name="Titre" id="mosSurvol-titre"></h3>
+            <p class="sous-titre" id="mosSurvol-sous_titre"></p>
+            <p class="categorie" data-name="Catégorie" id="mosSurvol-cat"></p>
+            <!--
+            <p class="sous-categorie" data-name="Sous_Catégorie" id="mosSurvol-sous_cat" hidden=""></p>
+            -->
+            <div class="survol"><!--
+                <p class="date" data-name="Date" id="mosSurvol-date"></p>
+                <p class="lieu" data-name="Lieu" id="mosSurvol-lieu"></p>
+                -->
+                <p class="description" id="mosSurvol-description"></p>
+                <p class="btn btn-default" id="mosSurvol-button">Consulter</p>
+            </div>
+        </div>
+        <figure><img id="mosSurvol-img" alt="" data-src="" class="lazy loaded" data-was-processed="true" /></figure>
+    </a>
+</li>
+</template>
